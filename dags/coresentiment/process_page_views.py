@@ -21,10 +21,6 @@ with DAG(
         return ""
 
     @task
-    def transform_pages():
-        return ""
-
-    @task
     def load_pages():
         return ""
 
@@ -33,4 +29,4 @@ with DAG(
         return ""
 
 
-    _download_file() >> extract_pages() >> transform_pages() >> load_pages() >> analyze_pageviews()
+    _download_file() >> extract_pages() >> load_pages() >> analyze_pageviews()
