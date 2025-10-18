@@ -1,0 +1,14 @@
+/logs
+*/__pycache__
+__pycache__/
+/.DS_Store
+/config
+logs/
+config/airflow.cfg
+config/webserver_config.py
+*.pyc
+.idea/
+.env
+mm.md
+venv/
+data/
