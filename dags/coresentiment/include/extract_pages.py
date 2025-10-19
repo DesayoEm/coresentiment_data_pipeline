@@ -30,8 +30,8 @@ def extract_page_counts(file_location):
     for company in counts.keys():
         pages = company_pages.get(company, [])
 
-    mask = df["title"].isin(pages)
-    counts[company] = df.loc[mask, "view_count"].sum()
+        mask = df["title"].isin(pages)
+        counts[company] = df.loc[mask, "view_count"].sum()
 
     print(counts)
     return counts

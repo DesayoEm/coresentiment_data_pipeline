@@ -33,3 +33,5 @@ def process_page_views():
 
     file_path = _download_file()
     page_counts = extract_pages(file_path)
+
+process_page_views()
