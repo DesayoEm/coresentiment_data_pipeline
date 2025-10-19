@@ -28,6 +28,9 @@ def download_file():
                 f.write(chunk)
 
         log.info(f"Dumped {file_name} successfully at {file_location} ")
+        return file_location
+
+
 
     except Exception as e:
         log.error(f"Could not download file at {url}. Details: {str(e)}")
