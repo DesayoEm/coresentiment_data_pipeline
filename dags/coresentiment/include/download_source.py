@@ -1,7 +1,7 @@
 from datetime import datetime as dt, timedelta
 from airflow.utils.log.logging_mixin import LoggingMixin
 import requests
-from settings import config
+from .config.settings import config
 
 log = LoggingMixin().log
 
@@ -27,7 +27,7 @@ def download_file():
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
 
-        log.info(f"Dumped {file_name} successfully at {file_location} ")
+        log.info(f"Dumped page views for {"pass"} successfully at {file_location}")
         return file_location
 
 

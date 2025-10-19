@@ -1,15 +1,17 @@
-from airflow.sdk import DAG, task
+from airflow.sdk import dag, task
 from pendulum import datetime
-from coresentiment.include.extract import download_file
+from coresentiment.include.download_source import download_file
+from coresentiment.include.extract_pages import extract_page_counts
 
 
-with DAG(
-    dag_id="page_views",
+@dag(
+    dag_id="process_page_views",
     start_date=datetime(2025, 10, 18),
     catchup=False,
     schedule=None,
-    tags={"pageviews"}
-):
+    tags=["pageviews"]
+)
+def process_page_views():
 
 
     @task
@@ -17,8 +19,8 @@ with DAG(
         return download_file()
 
     @task
-    def extract_pages():
-        return ""
+    def extract_pages(file_location):
+        return extract_page_counts(file_location)
 
     @task
     def load_pages():
@@ -29,4 +31,5 @@ with DAG(
         return ""
 
 
-    _download_file() >> extract_pages() >> load_pages() >> analyze_pageviews()
+    file_path = _download_file()
+    page_counts = extract_pages(file_path)

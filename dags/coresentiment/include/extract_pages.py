@@ -1,8 +1,7 @@
 import pandas as pd
 import hashlib
-from zipfile import ZipFile
 from airflow.utils.log.logging_mixin import LoggingMixin
-from dags.coresentiment.include.related_pages.compile_related_pages import company_pages
+from coresentiment.include.config.company_pages_config import company_pages
 
 
 log = LoggingMixin().log
@@ -14,12 +13,12 @@ def generate_key(*args) -> str:
     return hashlib.md5(combined.encode()).hexdigest()[:16]
 
 
-def read_zipped_file(file_location):
+def extract_page_counts(file_location):
     log.info(f"Processing")
 
     df = pd.read_csv(
         file_location,
-        compression="zip",
+        compression="gzip",
         sep=" ",
         names=["domain", "title", "view_count", "response_size"]
     )
@@ -34,4 +33,5 @@ def read_zipped_file(file_location):
     mask = df["title"].isin(pages)
     counts[company] = df.loc[mask, "view_count"].sum()
 
+    print(counts)
     return counts
