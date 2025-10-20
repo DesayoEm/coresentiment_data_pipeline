@@ -1,7 +1,8 @@
 from airflow.sdk import dag, task
 from pendulum import datetime
+from airflow.providers.standard.operators.python import PythonOperator
 from coresentiment.include.download_source import download_file
-from coresentiment.include.extract_pages import extract_page_counts
+from coresentiment.include.process_pages import process_page_views_count
 
 
 @dag(
@@ -13,25 +14,28 @@ from coresentiment.include.extract_pages import extract_page_counts
 )
 def process_page_views():
 
+    _download_file = PythonOperator(
+        task_id="download_file",
+        python_callable=download_file
+    )
 
-    @task
-    def _download_file():
-        return download_file()
-
-    @task
-    def extract_pages(file_location):
-        return extract_page_counts(file_location)
-
-    @task
-    def load_pages():
-        return ""
-
-    @task
-    def analyze_pageviews():
-        return ""
+    _process_page_views_count = PythonOperator(
+        task_id="process_page_views_count",
+        python_callable=process_page_views_count,
+        op_kwargs={'file_location': '{{ti.xcom_pull(task_ids="download_file")}}'}
+    )
 
 
-    file_path = _download_file()
-    page_counts = extract_pages(file_path)
+    # @task
+    # def load_pages():
+    #     return ""
+    #
+    # @task
+    # def analyze_pageviews():
+    #     return ""
+
+
+    _download_file >> _process_page_views_count
+
 
 process_page_views()
