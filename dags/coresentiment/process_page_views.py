@@ -1,8 +1,9 @@
 from airflow.sdk import dag, task
 from pendulum import datetime
 from airflow.providers.standard.operators.python import PythonOperator
-from coresentiment.include.download_source import download_file
-from coresentiment.include.process_pages import process_page_views_count
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
+from coresentiment.include.python_tasks.download_source import download_file
+from coresentiment.include.python_tasks.process_pages import process_page_views_count
 
 
 @dag(
@@ -25,17 +26,24 @@ def process_page_views():
         op_kwargs={'file_location': '{{ti.xcom_pull(task_ids="download_file")}}'}
     )
 
+    _create_page_views_table = SQLExecuteQueryOperator(
+        task_id="create_page_views_table",
+        sql="include/sql/create_page_views_table.sql",
+        conn_id="postgres"
+    )
 
-    # @task
-    # def load_pages():
-    #     return ""
-    #
+    _load_to_warehouse = SQLExecuteQueryOperator(
+        task_id="_load_to_warehouse",
+        conn_id="postgres",
+        sql="include/sql/load_to_wh.sql",
+        parameters = {'input_file_path': '{{ti.xcom_pull(task_ids="process_page_views_count")}}'}
+    )
+
     # @task
     # def analyze_pageviews():
     #     return ""
 
-
-    _download_file >> _process_page_views_count
+    _download_file >> _process_page_views_count >> _create_page_views_table >> _load_to_warehouse
 
 
 process_page_views()

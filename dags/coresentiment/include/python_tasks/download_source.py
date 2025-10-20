@@ -1,7 +1,7 @@
 from datetime import datetime as dt, timedelta
 from airflow.utils.log.logging_mixin import LoggingMixin
 import requests
-from .config.settings import config
+from dags.coresentiment.include.config.settings import config
 
 log = LoggingMixin().log
 

@@ -3,7 +3,7 @@ import os
 import hashlib
 from airflow.utils.log.logging_mixin import LoggingMixin
 from coresentiment.include.config.company_pages_config import company_pages
-from .config.settings import config
+from dags.coresentiment.include.config.settings import config
 
 
 log = LoggingMixin().log
