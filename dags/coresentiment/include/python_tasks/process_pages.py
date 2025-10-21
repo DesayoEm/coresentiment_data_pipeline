@@ -27,7 +27,8 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
     df = df.drop(columns=["response_size"])
     processed_rows = []
 
-    for company, pages in company_pages.items():
+    for company, company_data in company_pages.items():
+        pages = company_data["pages"]
         company_df = df[df["title"].isin(pages)].copy()
 
         if not company_df.empty:
@@ -51,6 +52,7 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
 
     if processed_rows:
         result_df = pd.concat(processed_rows, ignore_index=True)
+
         log.info(f"Processed {len(company_pages)} companies, found {len(result_df)} matching pages")
     else:
         result_df = pd.DataFrame()
@@ -61,12 +63,12 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
 
 def store_page_views_count(df: pd.DataFrame):
     output_dir = config.PAGE_VIEWS_DIR
-    output_file = f"{output_dir}/processed_page_views.txt"
+    output_file = f"{output_dir}/processed_page_views.csv"
 
     log.info(f"Data for {''} saved at {output_file}")
 
     os.makedirs(output_dir, exist_ok=True)
-    df.to_csv(output_file, sep=" ", index=False, header= False,  encoding="utf-8")
+    df.to_csv(output_file, sep=",", index=False, header= True,  encoding="utf-8")
 
     return output_file
 
