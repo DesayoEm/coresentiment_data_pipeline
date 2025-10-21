@@ -6,6 +6,9 @@ load_dotenv()
 
 class Settings(BaseSettings):
     PAGE_VIEWS_DIR: str
+    DB_NAME: str
+    DB_USER: str
+    DB_PASSWORD: str
 
     model_config = SettingsConfigDict(
         env_file=".env",

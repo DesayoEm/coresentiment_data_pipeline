@@ -34,22 +34,22 @@ def process_page_views():
     _create_page_views_table = SQLExecuteQueryOperator(
         task_id="create_page_views_table",
         sql="include/sql/create_page_views_table.sql",
-        conn_id="postgres"
+        conn_id="coresentiment_db"
     )
 
-    _load_to_warehouse = SQLExecuteQueryOperator(
-        task_id="_load_to_warehouse",
-        conn_id="postgres",
-        sql="include/sql/load_to_dw.sql",
-        parameters = {'input_file_path': '{{ti.xcom_pull(task_ids="process_page_views_count")}}'}
-    )
+    # _load_to_warehouse = SQLExecuteQueryOperator(
+    #     task_id="_load_to_warehouse",
+    #     conn_id="postgres",
+    #     sql="include/sql/load_to_dw.sql",
+    #     parameters = {'input_file_path': '{{ti.xcom_pull(task_ids="process_page_views_count")}}'}
+    # )
 
     # @task
     # def analyze_pageviews():
     #     return ""
 
-    _download_file >> _process_page_views_count
-    # _download_file >> _process_page_views_count >> _create_page_views_table >> _load_to_warehouse
+    _download_file >> _process_page_views_count >> _create_page_views_table
+    # _download_file >> _process_page_views_count >>  _load_to_warehouse
 
 
 process_page_views()
