@@ -1,22 +1,22 @@
+from datetime import date
 import pandas as pd
 import os
 import hashlib
 from airflow.utils.log.logging_mixin import LoggingMixin
 from coresentiment.include.config.company_pages_config import company_pages
-from dags.coresentiment.include.config.settings import config
+from coresentiment.include.config.settings import config
 
 
 log = LoggingMixin().log
 
 
 def generate_key(*args) -> str:
-    """Generate a deterministic surrogate key from input values."""
     combined = '|'.join(str(arg) for arg in args if arg is not None)
     return hashlib.md5(combined.encode()).hexdigest()[:16]
 
 
-def process_page_views_count(file_location):
-    log.info(f"Processing")
+def process_page_views_count(file_location, dump_date: date, dump_hour: int):
+    log.info(f"Processing page views count for {file_location}")
 
     df = pd.read_csv(
         file_location,
@@ -24,20 +24,38 @@ def process_page_views_count(file_location):
         sep=" ",
         names=["domain", "title", "view_count", "response_size"]
     )
+    df = df.drop(columns=["response_size"])
+    processed_rows = []
 
-    df["view_count"] = pd.to_numeric(df["view_count"], errors="coerce").fillna(0)
+    for company, pages in company_pages.items():
+        company_df = df[df["title"].isin(pages)].copy()
 
-    counts = {"Amazon": 0, "Apple": 0, "Facebook": 0, "Google": 0, "Microsoft": 0}
+        if not company_df.empty:
+            company_df["page_view_id"] = company_df.apply(
+                lambda row: generate_key(dump_date, dump_hour, row["title"]),
+                axis=1
+            )
+            company_df["page_id"] = company_df.apply(
+                lambda row: generate_key(company, row["domain"], row["title"]),
+                axis=1
+            )
+            company_df["company_id"] = generate_key(company)
+            company_df["company_name"] = company
+            company_df["page_title"] = company_df["title"]
+            company_df["view_count"] = company_df["view_count"].astype(int)
+            company_df["day"] = dump_date
+            company_df["hour"] = dump_hour
 
+            processed_rows.append(company_df)
+            log.info(f"Successfully counted {len(company_df)} pages for {company}")
 
-    for company in counts.keys():
-        pages = company_pages.get(company, [])
+    if processed_rows:
+        result_df = pd.concat(processed_rows, ignore_index=True)
+        log.info(f"Processed {len(company_pages)} companies, found {len(result_df)} matching pages")
+    else:
+        result_df = pd.DataFrame()
+        log.info("No matching pages found for any company")
 
-        mask = df["title"].isin(pages)
-        counts[company] = df.loc[mask, "view_count"].sum()
-
-    log.info(f"Counted pages successfully {counts}")
-    result_df = pd.DataFrame(list(counts.items()), columns=["company", "view_count"])
     return store_page_views_count(result_df)
 
 

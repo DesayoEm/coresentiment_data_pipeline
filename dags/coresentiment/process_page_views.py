@@ -18,12 +18,17 @@ def process_page_views():
     _download_file = PythonOperator(
         task_id="download_file",
         python_callable=download_file
+
     )
 
     _process_page_views_count = PythonOperator(
         task_id="process_page_views_count",
         python_callable=process_page_views_count,
-        op_kwargs={'file_location': '{{ti.xcom_pull(task_ids="download_file")}}'}
+        op_kwargs={
+            'file_location': '{{ti.xcom_pull(task_ids="download_file", key="file_location")}}',
+            'dump_date': '{{ti.xcom_pull(task_ids="download_file", key="dump_date")}}',
+            'dump_hour': '{{ti.xcom_pull(task_ids="download_file", key="dump_hour")}}'
+        }
     )
 
     _create_page_views_table = SQLExecuteQueryOperator(
@@ -43,7 +48,8 @@ def process_page_views():
     # def analyze_pageviews():
     #     return ""
 
-    _download_file >> _process_page_views_count >> _create_page_views_table >> _load_to_warehouse
+    _download_file >> _process_page_views_count
+    # _download_file >> _process_page_views_count >> _create_page_views_table >> _load_to_warehouse
 
 
 process_page_views()

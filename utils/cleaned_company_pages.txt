@@ -106,533 +106,108 @@ Amazon
 
 Apple
 --------------------
-  AIM_alliance
-  ARKit
-  AVFoundation
-  Activity_Monitor
-  AirPower_(Apple)
-  AirTag
-  App_Store_(Apple)
-  Apple's_EU_tax_dispute
-  AppleCare+
-  AppleLink
-  AppleMasters
-  AppleShare
-  AppleSingle_and_AppleDouble_formats
-  AppleTalk
-  AppleTalk_Remote_Access
-  AppleToo
-  AppleWorks
-  AppleWorks_User_Group
-  Apple_Account
-  Apple_Advanced_Technology_Group
-  Apple_Arcade
-  Apple_Assembly_Line
-  Apple_Authorized_Service_Provider
-  Apple_Books
-  Apple_Campus_3
-  Apple_Card
-  Apple_Certified_System_Administrator
-  Apple_Computer,_Inc._v._Franklin_Computer_Corp.
-  Apple_Computer,_Inc._v._Microsoft_Corp.
-  Apple_Computer,_Inc._v_Mackintosh_Computers_Ltd.
-  Apple_Configurator
-  Apple_Corps_v_Apple_Computer
-  Apple_Design_Awards
-  Apple_Developer
-  Apple_Display_Connector
-  Apple_Energy
-  Apple_Expo
-  Apple_Fifth_Avenue
-  Apple_FileWare
-  Apple_File_Exchange
-  Apple_Fitness+
-  Apple_Home
-  Apple_II_processor_cards
-  Apple_IMC
-  Apple_Inc.
-  Apple_Inc._advertising
-  Apple_Inc._and_unions
-  Apple_Inc._design_motifs
-  Apple_Inc._v._Pepper
-  Apple_Inc._v._Samsung_Electronics_Co.
-  Apple_Industrial_Design_Group
-  Apple_Infinite_Loop_campus
-  Apple_Intelligence
-  Apple_Interactive_Television_Box
-  Apple_Loops_Utility
-  Apple_Mail
-  Apple_Maps
-  Apple_Media_Tool
-  Apple_Michigan_Avenue
-  Apple_Monitor_II
-  Apple_Monitor_III
-  Apple_Museum,_Prague
-  Apple_Music
-  Apple_Music_1
-  Apple_Music_Festival
-  Apple_News
-  Apple_News+
-  Apple_One
-  Apple_OneScanner
-  Apple_Open_Collaboration_Environment
-  Apple_Open_Directory
-  Apple_Paladin
-  Apple_Park
-  Apple_Park_Visitor_Center
-  Apple_Pascal
-  Apple_Pay
-  Apple_Performa_Plus_Display
-  Apple_Pioneer_Place
-  Apple_Pippin
-  Apple_Podcasts
-  Apple_Polishing_Cloth
-  Apple_Public_Source_License
-  Apple_Pugetsound_Program_Library_Exchange
-  Apple_Push_Notification_service
-  Apple_Qmaster
-  Apple_QuickTake
-  Apple_SIM
-  Apple_Sales_International
-  Apple_Services
-  Apple_Store
-  Apple_Studios
-  Apple_Support
-  Apple_Symbols
-  Apple_TV
-  Apple_TV_(streaming_service)
-  Apple_TV_app
-  Apple_University
-  Apple_User_Group_Connection
-  Apple_Vision_Pro
-  Apple_Wallet
-  Apple_Worldwide_Video
-  Apple_Worm
-  Apple_car_project
-  Apple_certification_programs
-  Apple_community
-  Apple_ecosystem
-  Apple_supply_chain
-  Apple_v._Digital_Research
-  Apple_v._Does
-  Apple–FBI_encryption_dispute
-  Apple–Intel_architecture
-  Arm_Holdings
-  Asphalt_Legends
-  Aspyr
-  Athens_(typeface)
-  BIS_Records
-  Batterygate
-  Beats_Electronics
-  Beats_Music
-  Beats_Pill
-  Beddit
-  Berkeley_Macintosh_Users_Group
-  Blek
-  Bonjour_(software)
-  Bonjour_Sleep_Proxy
-  Boot_Camp_(software)
-  Bozo_bit
-  Braeburn_Capital
-  CUPS
-  Calculator_(Apple)
-  Calendar_(Apple)
-  Call-A.P.P.L.E.
-  CarPlay
-  Carbon_(API)
-  Censorship_by_Apple
-  Claris
-  Classic_Mac_OS
-  Classroom_(Apple)
-  Clips_(software)
-  Clock_(Apple)
-  CloudKit
-  Cocoa_(API)
-  Color_Labs
-  Command_key
-  ComputerWare
-  Computer_Edge_v_Apple
-  Contacts_(Apple)
-  Copland_(operating_system)
-  Core_Audio_Format
-  Cover_Flow
-  Criticism_of_Apple_Inc.
-  DUsers
-  Data_Stream_Interface
-  David_Graham_(actor)
-  Delicious_Monster
-  Designed_by_Apple_in_California
-  Develop_(Apple_magazine)n
-  Dogcow
-  Drive.ai
-  Environmental_impact_of_Apple_Inc.
-  Epic_Games_v._Apple
-  Exposure_Notification
-  FaceTime
-  Family_Sharing
-  Files_(Apple)
-  Final_Cut_Pro
-  Final_Cut_Server
-  Find_My
-  Find_My_Friends
-  Find_My_iPhone
-  FingerWorks
-  Fitness_(Apple)
-  Flighty
-  Flyover_(Apple_Maps)
-  Force_Touch
-  Fort_Churchill_Solar_Array
-  Foulum_Data_Center
-  FoundationDB
-  FourCC
-  Freeform_(Apple)
-  Front_Row_(software)
-  Game_Center
-
-
-  Halfbrick_Studios
-  HealthKit
-  Health_(Apple)
-  High-Tech_Employee_Antitrust_Litigation
-  History_of_Apple_Inc.
-  History_of_the_iPhone
-  Hoefler_Text
-  HomePod
-  HomePod_Mini
-  HopStop
-  HotSauce
-  HumancentiPad
-  IAd
-  IAd_Producer
-  IChat
-  ICloud
-  IDisk
-  IFund
-  ILife
-  IMovie
-  IOS
-  IOS_app_approvals
-  IOS_version_history
-  IPhone_hardware
-  IPod
-  IPod_Touch_(1st_generation)
-  IPod_advertising
-  IReview
-  ISheep
-  ITunes
-  ITunes_Connect
-  ITunes_Ping
-  ITunes_Radio
-  ITunes_Store
-  IWork
-  Identifier_for_Advertisers
-  Imagination_Technologies
-  Improvision
-  InPhase_Technologies
-  InVisage_Technologies
-  Infinite_Loop_(book)
-  Infinity_Blade
-  Inside_(video_game)
-  Integrated_Woz_Machine
-  International_Rights_Advocates_v._Apple,_Microsoft,_Dell,_Tesla
-  Intrinsity
-  JBND
-  Jabbertalky
-  Jeff_Goldblum
-  Jetpack_Joyride
-  Jin_Katagiri
-  John_Hodgman
-  Journal_(Apple)
-  Kaleida_Labs
-  Kamibox
-  KansasFest
-  Katie_Cotton
-  Kentarō_Kobayashi
-  Keynote_(presentation_software)
-  Kotoeri
-  Lala_(website)
-  Lara_Croft_Go
-  Lee_Clow
-  Lemmings_(advertisement)
-  Leo's_Fortune
-  Lightning_(connector)
-  Limbo_(video_game)
-  Linux_on_Apple_devices
-  Liquid_Glass
-  Liquidmetal
-  List_of_Apple_Inc._media_events
-  List_of_Apple_TV_original_films
-  List_of_Apple_TV_original_programming
-  List_of_Apple_codenames
-  List_of_Apple_drives
-  List_of_Apple_operating_systems
-  List_of_Apple_printers
-  List_of_Apple_pro_apps
-  List_of_Apple_products
-  List_of_Apple_typefaces
-  List_of_Mac_models
-  List_of_Mac_models_grouped_by_CPU_type
-  List_of_Swift_software_and_tools
-  List_of_built-in_iOS_apps
-  List_of_built-in_macOS_apps
-  List_of_iPad_accessories
-  List_of_iPad_models
-  List_of_iPhone_models
-  List_of_mergers_and_acquisitions_by_Apple
-  List_of_software_by_Apple_Inc.
-  List_of_typefaces_included_with_macOS
-  Lists_of_Apple_software
-  Litigation_involving_Apple_Inc.
-  LocalTalk
-  LocalTalk-to-Ethernet_bridge
-  Logic_Studio
-  Look_Around_(Apple)
-  Lucida_Grande
-  Luxology
-  M4V
-  MLS_Season_Pass
-  MacArabic_encoding
-  MacCharlie
-  MacExpo_London
-  MacFarsi_encoding
-  MacHack
-  MacJournal
-  MacOS
-  MacWorks_Plus
-  MacWorks_XL
-  Mac_(computer)
-  Mac_App_Store
-  Mac_OS_Icelandic_encoding
-  Mac_OS_Runtime_for_Java
-  Mac_operating_systems
-  Mac_transition_to_Apple_silicon
-  Mac_transition_to_Intel_processors
-  Mac_transition_to_PowerPC_processors
-  Macintosh_Application_Environment
-  Macintosh_Guide
-  Macintosh_Office
-  Macintosh_Printer_Secrets
-  Macintosh_User_Group
-  Macintosh_conversion
-  Macoun_Developers_Conference
-  Macquarium
-  MacsBug
-  Macworld/iWorld
-  MagSafe
-  MagSafe_(wireless_charger)
-  MainStage_(software)
-  MapKit
-  Marc_Newson
-  Marketing_of_Apple_Inc.
-  Marketing_part_number
-  Menlo_(typeface)
-  Messages_(Apple)
-  MetaCreations
-  Meta_Content_Framework
-  Metaio
-  Metal_(API)
-  Metamorphabet
-  Mimimi_Games
-  Mindfulness_(Apple)
-  Mini-DVI
-  Mini_DisplayPort
-  Missile_Attack
-  Mitchell_and_Webb
-  MobileMe
-  Monaco_(typeface)
-  Monument_Valley_(video_game)
-  Motorola_Mobility_v._Apple_Inc.
-  Mouse_Practice
-  Mushroom_11
-  Music_(app)
-  Myriad_(typeface)
-  NAT_Port_Mapping_Protocol
-  Nabih's_Inc.
-  NeXT
-  New_York_(1983_typeface)
-  New_York_(2019_typeface)
-  Newer_Technology
-  Newton,_Inc.
-  Notes_(Apple)
-  Nothing_Real
-  Notification_Center
-  NuBus
-  Numbers_(spreadsheet)
-  Old_Man's_Journey
-  Ole_Obermann
-  OmniGraffle
-  One_to_One_(Apple)
-  OpenDoc
-  OpenPIC_and_MPIC
-  Option_key
-  Osmos
-  Outline_of_Apple_Inc.
-  Outrigger_Macintosh
-  P.A._Semi
-  PKPASS
-  Pages_(word_processor)
-  Pangea_Software
-  Panic_Inc.
-  Passwords_(Apple)
-  Paul_Terrell
-  Phil_Morrison_(director)
-  Photo_Booth
-  Photos_(Apple)
-  Pirates_of_Silicon_Valley
-  Plasq
-  Playdead
-  Podium_Sans
-  Polar_Rose_(facial_recognition)
-  Potential_acquisition_of_Disney_by_Apple
-  PowerCD
-  Power_Computing_Corporation
-  Power_Management_Unit
-  Preferred_Executable_Format
-  PrimeSense
-  Primephonic
-  ProCare
-  QuickDraw
-  QuickRing
-  RAC7
-  Rahmens
-  Railbound
-  Real_Racing_(video_game)
-  Reality_distortion_field
-  Reminders_(Apple)
-  Repair_permissions
-  ResearchKit
-  Ridiculous_Fishing
-  Ridley_Scott
-  Robert_Webb
-  Rockstar_Consortium
-  SHSH_blob
-  SK8_(programming_language)
-  Safari_(web_browser)
-  Safari_4
-  Safari_5
-  Sam_Hocevar
-  Samuel_Ross
-  San_Francisco_(decorative_typeface)
-  San_Francisco_(sans-serif_typeface)
-  Sayonara_Wild_Hearts
-  Serif_Europe
-  Setapp
-  Severed_(video_game)
-  Shadowmatic
-  Shake_(software)
-  Shazam_(music_app)
-  Shortcuts_(Apple)
-  Sign_in_with_Apple
-  Silicon_Grail
-  Simogo
-  Siri
-  Siri_Remote
-  Skia_(typeface)
-  Sky:_Children_of_the_Light
-  Small_Dog_Electronics
-  Smartphone_patent_wars
-  SoundJam_MP
-  Soup_(Apple)
-  Squeak
-  Standard_Apple_Numerics_Environment
-  StatView
-  Steve_Hayden
-  Steve_Jobs:_The_Lost_Interview
-  Steve_Jobs:_The_Man_in_the_Machine
-  Steve_Jobs_Theater
-  Steve_Wozniak
-  Stevenote
-  Swell_Radio
-
-
-  Swift_(programming_language)
-  Swift_Playgrounds
-  TOPS_(file_server)
-  Talking_Moose
-  TeXShop
-  TestFlight
-  United_States_v._Adobe_Systems,_Inc.,_Apple_Inc.,_Google_Inc.,_Intel_Corporation,_Intuit,_Inc.,_and_Pixar
-  United_States_v._Apple_(2012)
-  United_States_v._Apple_(2024)
-  Walkie-Talkie_(Apple)
-  WatchKit
-  WeatherKit
-  Weather_(Apple)
-  WebKit
-  Workouts_(Apple)
-
-
+Apple_Inc.
+History_of_Apple_Inc.
+Mac_(computer)
+MacBook
+iMac
+Mac_Pro
+Mac_Mini
+Mac_Studio
+iPhone
+iPhone_hardware
+History_of_the_iPhone
+iPad
+Apple_Watch
+AirPods
+iPod
+Apple_TV
+HomePod
+HomePod_Mini
+Apple_Vision_Pro
+AirTag
+iOS
+macOS
+watchOS
+tvOS
+iPadOS
+Apple_Music
+Apple_TV_(streaming_service)
+Apple_Arcade
+Apple_Fitness+
+Apple_News
+Apple_News+
+Apple_Pay
+Apple_Card
+Apple_Wallet
+iCloud
+App_Store_(Apple)
+Apple_Books
+Apple_Podcasts
+Apple_One
+Apple_Services
+Safari_(web_browser)
+FaceTime
+iMessage
+Siri
+Apple_Maps
+Find_My
+Health_(Apple)
+Photos_(Apple)
+Apple_Mail
+Apple_Silicon
+CarPlay
+ARKit
+Apple_Intelligence
+Metal_(API)
+Swift_(programming_language)
+WebKit
+Apple_ecosystem
+Family_Sharing
+Apple_Account
+AppleCare+
+Beats_Electronics
+Beats_Music
+Shazam_(music_app)
+Criticism_of_Apple_Inc.
+Apple_Inc._and_unions
+Batterygate
+Apple–FBI_encryption_dispute
+Censorship_by_Apple
+Environmental_impact_of_Apple_Inc.
+Apple's_EU_tax_dispute
+Epic_Games_v._Apple
+Litigation_involving_Apple_Inc.
+Marketing_of_Apple_Inc.
 
 
 Meta
 --------------------
-  Armature_Studio
-  Atlas_Solutions
-  Aura_Salla
-  BandPage
-  Blendr
-  Blocking_of_Meta_Platforms_in_Russia
-  BranchOut
-  Camouflaj
-  Chris_Cox_(manager)
-  Clara_Shih
-  Coke_Zero_Facial_Profiler
-  CrowdStar
-  David_Wehner
-  Diem_(digital_currency)
-  Drop.io
-  Edits_(app)
-  Face.com
-  Facebook
-  FameLeague
-  Farai_Morobane
-  Ferras_Hamad
-  Forrest_N._Iandola
-  FriendFeed
-  Get_Satisfaction
-  Gowalla
-  INQ1
-  Initial_public_offering_of_Facebook
-  Inq_Mobile
-  Instagram
-  Internet.org
-  Kendi_Ntwiga
-  Kristina_Arriaga
-  Lasso_(video_sharing_app)
-  Lawsuits_involving_Meta_Platforms
-  Lightbox.com
-  List_of_mergers_and_acquisitions_by_Meta_Platforms
-  Llama_(language_model)
-  Mapillary
-  Messenger_(Meta)
-  Meta_AI
-  Meta_Hacker_Cup
-  Meta_Platforms
-  Meta_Superintelligence_Labs
-  Meta_and_unions
-  Nat_Friedman
-  Nick_Clegg
-  Onavo
-  Parakey
-  Parse,_Inc.
-  Ready_at_Dawn
-  Reality_Labs
-  Sandhya_Devanathan
-  Sanzaru_Games
-  Shopcade
-  Social_Reader
-  Sophia_Li
-  Spleak
-  Spool_(software_company)
-  SuperPoke!
-  Tbh
-  Threads_(social_network)
-  Twisted_Pixel_Games
-  Vijaye_Raji
-  WhatsApp
-  Wirehog
-  Within_(company)
-  Workplace_(software)
+Meta_Platforms
+Facebook
+Instagram
+WhatsApp
+Messenger_(Meta)
+Threads_(social_network)
+Reality_Labs
+Meta_Quest
+Oculus_Quest
+Oculus_Rift
+Portal_(smart_display)
+Ray-Ban_Stories
+Meta_AI
+Llama_(language_model)
+Meta_Superintelligence_Labs
+Workplace_(software)
+Internet.org
+Diem_(digital_currency)
+Meta_and_unions
+Blocking_of_Meta_Platforms_in_Russia
+Lawsuits_involving_Meta_Platforms
+Cambridge_Analytica_scandal
+Facebook–Cambridge_Analytica_data_scandal
+Initial_public_offering_of_Facebook
+History_of_Facebook
 
 
 Google (810 pages)

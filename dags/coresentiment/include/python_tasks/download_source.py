@@ -1,11 +1,11 @@
 from datetime import datetime as dt, timedelta
 from airflow.utils.log.logging_mixin import LoggingMixin
 import requests
-from dags.coresentiment.include.config.settings import config
+from coresentiment.include.config.settings import config
 
 log = LoggingMixin().log
 
-def download_file():
+def download_file(ti):
     now = dt.now() - timedelta(hours=4)
 
     try:
@@ -19,7 +19,7 @@ def download_file():
         response = requests.get(url, stream=True)
         response.raw.decode_content = False
 
-        file_name = f"{now.strftime('%d %B %Y - %I %p')}"
+        file_name = f"{now.strftime('%d %B %Y - %H')}00"
         file_location = f"{config.PAGE_VIEWS_DIR}/{file_name}.gz"
 
 
@@ -28,7 +28,9 @@ def download_file():
                 f.write(chunk)
 
         log.info(f"Dumped page views for {"pass"} successfully at {file_location}")
-        return file_location
+        ti.xcom_push(key='file_location', value=file_location)
+        ti.xcom_push(key='dump_date', value=now.date())
+        ti.xcom_push(key='dump_hour', value=now.hour)
 
 
 
