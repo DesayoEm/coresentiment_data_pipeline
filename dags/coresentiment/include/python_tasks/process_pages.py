@@ -33,7 +33,7 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
 
         if not company_df.empty:
             company_df["page_view_id"] = company_df.apply(
-                lambda row: generate_key(dump_date, dump_hour, row["title"]),
+                lambda row: generate_key(company, dump_date, dump_hour, row["title"], row["domain"]),
                 axis=1
             )
             company_df["page_id"] = company_df.apply(
@@ -44,8 +44,10 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
             company_df["company_name"] = company
             company_df["page_title"] = company_df["title"]
             company_df["view_count"] = company_df["view_count"].astype(int)
-            company_df["day"] = dump_date
-            company_df["hour"] = dump_hour
+            company_df["source_date"] = dump_date
+            company_df["source_hour"] = dump_hour
+
+            company_df = company_df.drop(columns=["title"])
 
             processed_rows.append(company_df)
             log.info(f"Successfully counted {len(company_df)} pages for {company}")
@@ -63,12 +65,12 @@ def process_page_views_count(file_location, dump_date: date, dump_hour: int):
 
 def store_page_views_count(df: pd.DataFrame):
     output_dir = config.PAGE_VIEWS_DIR
-    output_file = f"{output_dir}/processed_page_views.csv"
+    output_file_path = f"{output_dir}/processed_page_views.csv"
 
-    log.info(f"Data for {''} saved at {output_file}")
+    log.info(f"Data for {''} saved at {output_file_path}")
 
     os.makedirs(output_dir, exist_ok=True)
-    df.to_csv(output_file, sep=",", index=False, header= True,  encoding="utf-8")
+    df.to_csv(output_file_path, sep=",", index=False, header= True,  encoding="utf-8")
 
-    return output_file
+    return output_file_path
 

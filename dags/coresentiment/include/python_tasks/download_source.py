@@ -27,10 +27,11 @@ def download_file(ti):
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
 
-        log.info(f"Dumped page views for {"pass"} successfully at {file_location}")
         ti.xcom_push(key='file_location', value=file_location)
         ti.xcom_push(key='dump_date', value=now.date())
         ti.xcom_push(key='dump_hour', value=now.hour)
+
+        log.info(f"Dumped page views for {"pass"} successfully at {file_location}")
 
 
 

@@ -4,6 +4,7 @@ from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from coresentiment.include.python_tasks.download_source import download_file
 from coresentiment.include.python_tasks.process_pages import process_page_views_count
+from coresentiment.include.python_tasks.load_data import load_data_from_file
 
 
 @dag(
@@ -37,19 +38,18 @@ def process_page_views():
         conn_id="coresentiment_db"
     )
 
-    # _load_to_warehouse = SQLExecuteQueryOperator(
-    #     task_id="_load_to_warehouse",
-    #     conn_id="postgres",
-    #     sql="include/sql/load_to_dw.sql",
-    #     parameters = {'input_file_path': '{{ti.xcom_pull(task_ids="process_page_views_count")}}'}
-    # )
+    _load_to_warehouse = PythonOperator(
+        task_id="load_to_warehouse",
+        python_callable=load_data_from_file,
+    )
+
 
     # @task
     # def analyze_pageviews():
     #     return ""
 
-    _download_file >> _process_page_views_count >> _create_page_views_table
-    # _download_file >> _process_page_views_count >>  _load_to_warehouse
+    _download_file >> _process_page_views_count >> _create_page_views_table >>  _load_to_warehouse
+
 
 
 process_page_views()
