@@ -1,4 +1,3 @@
------ create page views table
 CREATE TABLE IF NOT EXISTS page_views (
     page_view_id VARCHAR PRIMARY KEY,
     company_id VARCHAR NOT NULL,

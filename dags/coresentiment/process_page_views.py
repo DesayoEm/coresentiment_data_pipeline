@@ -43,12 +43,15 @@ def process_page_views():
         python_callable=load_data_from_file,
     )
 
+    _analyse_page_views = SQLExecuteQueryOperator(
+        task_id="analyse_page_views",
+        sql="include/sql/analyse_views.sql",
+        conn_id="coresentiment_db",
+        return_last=True,
+        show_return_value_in_logs=True
+    )
 
-    # @task
-    # def analyze_pageviews():
-    #     return ""
-
-    _download_file >> _process_page_views_count >> _create_page_views_table >>  _load_to_warehouse
+    _download_file >> _process_page_views_count >> _create_page_views_table >>  _load_to_warehouse >> _analyse_page_views
 
 
 

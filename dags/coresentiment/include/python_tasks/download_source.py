@@ -6,7 +6,7 @@ from coresentiment.include.config.settings import config
 log = LoggingMixin().log
 
 def download_file(ti):
-    now = dt.now() - timedelta(hours=4)
+    now = dt.now() - timedelta(hours=8)
 
     try:
         url = (
