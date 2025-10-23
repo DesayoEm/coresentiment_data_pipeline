@@ -26,7 +26,8 @@ x-airflow-common:
 
     #custom env config
     AIRFLOW_CONN_CORESENTIMENT_DB: "postgresql://${DB_USER}:${DB_PASSWORD}@coresentiment_db:5432/${DB_NAME}"
-    PAGE_VIEWS_DIR: /opt/airflow/data
+    PROCESSED_PAGE_VIEWS_DIR: /opt/airflow/data/processed
+    RAW_PAGE_VIEWS_DIR: /opt/airflow/data/raw
     DB_NAME: ${DB_NAME}
     DB_USER: ${DB_USER}
     DB_PASSWORD: ${DB_PASSWORD}

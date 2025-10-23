@@ -1,8 +1,8 @@
 from airflow.sdk import dag, task
 from pendulum import datetime
 from coresentiment.include.python_tasks.download_source import download_file_task
-from coresentiment.include.python_tasks.callbacks import success_callback
-from coresentiment.include.python_tasks.process_pages import process_page_views_count
+from coresentiment.include.python_tasks.notification import success_callback
+from coresentiment.include.python_tasks.process_pages import process_page_views_count_task
 from coresentiment.include.python_tasks.load_data import load_data_from_file
 
 
@@ -20,13 +20,13 @@ def process_page_views():
     def download_file():
         return download_file_task()
 
-    # @task
-    # def process_page_views_task(**file_info):
-    #     return process_page_views_count(
-    #         file_location=file_info['file_location'],
-    #         dump_date=file_info['dump_date'],
-    #         dump_hour=file_info['dump_hour']
-    #     )
+    @task(on_success_callback=success_callback)
+    def process_page_views_count(file_info):
+        return process_page_views_count_task(
+            file_location=file_info['file_location'],
+            dump_date=file_info['dump_date'],
+            dump_hour=file_info['dump_hour']
+        )
     #
     # @task
     # def create_table_task():
@@ -52,8 +52,9 @@ def process_page_views():
     #     return result
 
 
-    download_file()
-    # processed = process_page_views_task(file_info)
+    file_info = download_file()
+    processed = process_page_views_count(file_info)
+
     # table_created = create_table_task()
     # table_created.set_upstream(processed)
     # loaded = load_to_warehouse_task()

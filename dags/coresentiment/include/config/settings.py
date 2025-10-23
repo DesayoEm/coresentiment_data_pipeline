@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings(BaseSettings):
-    PAGE_VIEWS_DIR: str
+    RAW_PAGE_VIEWS_DIR: str
+    PROCESSED_PAGE_VIEWS_DIR: str
     DB_NAME: str
     DB_USER: str
     DB_PASSWORD: str
