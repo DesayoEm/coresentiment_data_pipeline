@@ -1,8 +1,7 @@
 from airflow.sdk import dag, task
 from pendulum import datetime
-from airflow.providers.standard.operators.python import PythonOperator
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-from coresentiment.include.python_tasks.download_source import download_file
+from coresentiment.include.python_tasks.download_source import download_file_task
+from coresentiment.include.python_tasks.callbacks import success_callback
 from coresentiment.include.python_tasks.process_pages import process_page_views_count
 from coresentiment.include.python_tasks.load_data import load_data_from_file
 
@@ -14,45 +13,53 @@ from coresentiment.include.python_tasks.load_data import load_data_from_file
     schedule=None,
     tags=["pageviews"]
 )
+
 def process_page_views():
 
-    _download_file = PythonOperator(
-        task_id="download_file",
-        python_callable=download_file
+    @task(on_success_callback=success_callback)
+    def download_file():
+        return download_file_task()
 
-    )
+    # @task
+    # def process_page_views_task(**file_info):
+    #     return process_page_views_count(
+    #         file_location=file_info['file_location'],
+    #         dump_date=file_info['dump_date'],
+    #         dump_hour=file_info['dump_hour']
+    #     )
+    #
+    # @task
+    # def create_table_task():
+    #     from airflow.providers.common.sql.hooks.sql import DbApiHook
+    #     hook = SqlHook(conn_id="coresentiment_db")
+    #     with open("include/sql/create_page_views_table.sql", 'r') as f:
+    #         sql = f.read()
+    #     hook.run(sql)
+    #
+    #
+    # @task
+    # def load_to_warehouse_task():
+    #     return load_data_from_file()
+    #
+    # @task
+    # def analyse_page_views_task():
+    #     from airflow.providers.common.sql.hooks.sql import SqlHook
+    #     hook = SqlHook(conn_id="coresentiment_db")
+    #     with open("include/sql/analyse_views.sql", 'r') as f:
+    #         sql = f.read()
+    #     result = hook.get_first(sql)
+    #     print(f"Analysis result: {result}")
+    #     return result
 
-    _process_page_views_count = PythonOperator(
-        task_id="process_page_views_count",
-        python_callable=process_page_views_count,
-        op_kwargs={
-            'file_location': '{{ti.xcom_pull(task_ids="download_file", key="file_location")}}',
-            'dump_date': '{{ti.xcom_pull(task_ids="download_file", key="dump_date")}}',
-            'dump_hour': '{{ti.xcom_pull(task_ids="download_file", key="dump_hour")}}'
-        }
-    )
 
-    _create_page_views_table = SQLExecuteQueryOperator(
-        task_id="create_page_views_table",
-        sql="include/sql/create_page_views_table.sql",
-        conn_id="coresentiment_db"
-    )
-
-    _load_to_warehouse = PythonOperator(
-        task_id="load_to_warehouse",
-        python_callable=load_data_from_file,
-    )
-
-    _analyse_page_views = SQLExecuteQueryOperator(
-        task_id="analyse_page_views",
-        sql="include/sql/analyse_views.sql",
-        conn_id="coresentiment_db",
-        return_last=True,
-        show_return_value_in_logs=True
-    )
-
-    _download_file >> _process_page_views_count >> _create_page_views_table >>  _load_to_warehouse >> _analyse_page_views
-
+    download_file()
+    # processed = process_page_views_task(file_info)
+    # table_created = create_table_task()
+    # table_created.set_upstream(processed)
+    # loaded = load_to_warehouse_task()
+    # loaded.set_upstream(table_created)
+    # analysis = analyse_page_views_task()
+    # analysis.set_upstream(loaded)
 
 
 process_page_views()

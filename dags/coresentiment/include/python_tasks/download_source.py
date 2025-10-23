@@ -1,12 +1,15 @@
 from datetime import datetime as dt, timedelta
-from airflow.utils.log.logging_mixin import LoggingMixin
 import requests
+from airflow.utils.log.logging_mixin import LoggingMixin
 from coresentiment.include.config.settings import config
+from coresentiment.include.python_tasks.callbacks import deploy_failure
+from airflow.sdk import task
 
 log = LoggingMixin().log
 
-def download_file(ti):
-    now = dt.now() - timedelta(hours=8)
+
+def download_file_task(**context):
+    now = dt.now() - timedelta(hours=45)
 
     try:
         url = (
@@ -22,21 +25,31 @@ def download_file(ti):
         file_name = f"{now.strftime('%d %B %Y - %H')}00"
         file_location = f"{config.PAGE_VIEWS_DIR}/{file_name}.gz"
 
-
         with open(file_location, "wb") as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
 
-        ti.xcom_push(key='file_location', value=file_location)
-        ti.xcom_push(key='dump_date', value=now.date())
-        ti.xcom_push(key='dump_hour', value=now.hour)
-
-        log.info(f"Dumped page views for {"pass"} successfully at {file_location}")
+        log.info(f"Dumped page views successfully at {file_location}")
 
 
+        return {
+            'file_location': file_location,
+            'dump_date': str(now.date()),
+            'dump_hour': now.hour,
+            'task_display': 'file download',
+        }
 
     except Exception as e:
-        log.error(f"Could not download file at {url}. Details: {str(e)}")
-        raise e
+        deploy_failure(
+            error = e,
+            context = context,
+            metadata = {
+                'task_display': 'File download',
+                'dump_date': str(now.date()),
+                'dump_hour': now.hour
+            }
+
+
+        )
 
 
