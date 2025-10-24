@@ -86,17 +86,6 @@ services:
       start_period: 5s
     restart: always
 
-  metabase:
-    image: metabase/metabase:v0.52.8.4
-    restart: always
-    ports:
-      - 3000:3000
-    volumes:
-      - ./include/data/metabase:/metabase-data
-
-
-
-
   redis:
     image: redis:7.2-bookworm
     expose:

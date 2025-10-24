@@ -16,10 +16,23 @@ def success_callback(context):
             dump_date = task_info.get('dump_date')
             task_display = task_info.get('task_display')
 
+        elif ti.task_id == "stage_data_in_warehouse":
+            dump_hour = task_info.get('dump_hour')
+            dump_date = task_info.get('dump_date')
+            task_display = task_info.get('task_display')
+
+        elif ti.task_id == "stage_data_in_warehouse":
+            dump_hour = task_info.get('dump_hour')
+            dump_date = task_info.get('dump_date')
+            task_display = task_info.get('task_display')
+
+
+
+
 
         notifier = SlackNotifier(
             slack_conn_id='slack',
-            text=f'Page views DAG for {dump_date} hour {dump_hour}: {task_display} SUCCEEDED',
+            text=f'CoreSentiment Page views DAG for {dump_date} hour {dump_hour}: {task_display} SUCCEEDED',
             channel='page-views'
         )
         notifier.notify(context)
