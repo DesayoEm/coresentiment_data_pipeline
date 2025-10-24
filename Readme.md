@@ -28,6 +28,8 @@ process (8s)            truncate_staging (1s)
       └────────-> stage_data ←─┘
 ```
 
+![Alt text](docs/graph1.png)
+
 Total time: ~32 seconds instead of ~40 seconds if run serially.
 
 ---

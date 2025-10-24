@@ -9,8 +9,5 @@ config/webserver_config.py
 *.pyc
 .idea/
 .env
-mm.md
 venv/
 data/
-to.txt
-tt.txt
