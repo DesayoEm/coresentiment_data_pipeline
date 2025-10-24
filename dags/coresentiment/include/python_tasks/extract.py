@@ -12,7 +12,7 @@ log = LoggingMixin().log
 
 
 def download_file_task(**context):
-    now = dt.now() - timedelta(hours=17)
+    now = dt.now() - timedelta(hours=5)
     url = (
         f"https://dumps.wikimedia.org/other/pageviews/"
         f"{now:%Y}/{now:%Y-%m}/"

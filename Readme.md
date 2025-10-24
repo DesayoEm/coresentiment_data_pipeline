@@ -25,7 +25,7 @@ download_file (21s)     create_schemas (1s)
       ↓                        ↓
 process (8s)            truncate_staging (1s)
       ↓                        ↓
-      └────────→ stage_data ←─┘
+      └────────-> stage_data ←─┘
 ```
 
 Total time: ~32 seconds instead of ~40 seconds if run serially.
@@ -45,7 +45,7 @@ page_id = hash(company, domain, title)
 company_id = hash(company)
 ```
 
-**Impact:** The pipeline can be rerun without creating duplicates. Same input → same keys → `ON CONFLICT` skips duplicates.
+**Impact:** The pipeline can be rerun without creating duplicates. Same input -> same keys -> `ON CONFLICT` skips duplicates.
 
 ---
 
@@ -162,11 +162,11 @@ def deploy_failure(error: Exception,
 ```
 START
   ↓
-  ├─→ download_file                    (extracts Wikipedia pageview data)
+  ├─-> download_file                    (extracts Wikipedia pageview data)
   │     ↓
   │   process_page_views_count         (filters to company pages, enriches data)
   │     ↓
-  └─→ create_schemas_and_tables        (creates staging + analytics tables)
+  └─-> create_schemas_and_tables        (creates staging + analytics tables)
         ↓
       truncate_staging                  (clears staging for fresh load)
         ↓
@@ -182,7 +182,15 @@ START
 ### Task Details
 
 #### 1. `download_file`
-- Constructs Wikipedia URL dynamically using datetime + timedelta
+- Constructs Wikimedia URL dynamically based on the target date or hour
+```python
+now = dt.now() - timedelta(hours=5)
+    url = (
+        f"https://dumps.wikimedia.org/other/pageviews/"
+        f"{now:%Y}/{now:%Y-%m}/"
+        f"pageviews-{now:%Y%m%d-%H}0000.gz"
+    )
+```
 - Downloads compressed pageview file (~50MB gzipped)
 - Validates gzip format by checking magic bytes
 - Saves to date-based folders with hour-based naming
@@ -246,3 +254,36 @@ Rerunning the DAG for the same hour produces identical results. No duplicate dat
 - Config-driven company/page mappings
 - Schema separation (staging vs analytics)
 - Multi-level keys support flexible querying
+
+
+### 1. Clone the Repository
+```
+git clone https://github.com/DesayoEm/coresentiment_data_pipeline
+cd coresentiment
+```
+
+
+Create a `.env` file in the root directory with the following variables:
+
+```env
+AIRFLOW_UID=50000
+AIRFLOW_CONN_CORESENTIMENT_DB=postgresql://postgres:your_password@coresentiment_db:5432/coresentiment
+RAW_PAGE_VIEWS_DIR=/opt/airflow/data/raw
+PROCESSED_PAGE_VIEWS_DIR=/opt/airflow/data/processed
+DB_NAME=coresentiment
+DB_USER=postgres
+DB_PASSWORD=your_password
+```
+##  Running the Pipeline
+
+###  Build and run all services once
+```
+docker-compose up --build
+```
+
+### Cleaning Up
+```
+docker-compose down -v
+```
+
+

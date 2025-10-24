@@ -1,0 +1,335 @@
+Amazon
+--------------------
+
+  AWS_Glue
+  AWS_Graviton
+  AWS_Lambda
+  Alexa_Internet
+  Alexa_Ranking
+  Alexa_Web_Services
+  Amazon.com_Inc_v_Canada_(Commissioner_of_Patents)
+  Amazon_(company)
+  Amazon_Academy
+  Amazon_Affiliates
+  Amazon_Air
+  Amazon_Alexa
+  Amazon_Appstore
+  Amazon_Astro
+  Amazon_Aurora
+  Amazon_Books
+  Amazon_China
+  Amazon_Clinic
+  Amazon_CloudFront
+  Amazon_Coins
+  Amazon_Dash
+  Amazon_Digital_Software_&_Video_Games
+  Amazon_Drive
+  Amazon_DynamoDB
+  Amazon_Echo
+  Amazon_Echo_Buds
+  Amazon_Echo_Show
+  Amazon_Effect
+  Amazon_Elastic_Compute_Cloud
+  Amazon_Fire
+  Amazon_Fire_TV
+  Amazon_Fishbowl
+  Amazon_Freevee
+  Amazon_Fresh
+  Amazon_Games
+  Amazon_Go
+  Amazon_HQ2
+  Amazon_Inspire
+  Amazon_Kindle
+  Amazon_Kindle_devices
+  Amazon_Lab126
+  Amazon_Labor_Union
+  Amazon_Lex
+  Amazon_Light
+  Amazon_Live
+  Amazon_Locker
+  Amazon_Lumberyard
+  Amazon_Luna
+  Amazon_MGM_Studios
+  Amazon_Marketplace
+  Amazon_Mechanical_Turk
+  Amazon_Music
+  Amazon_One
+  Amazon_Original_Stories
+  Amazon_Pay
+  Amazon_Pharmacy
+  Amazon_Polly
+  Amazon_Prime
+  Amazon_Prime_Air
+  Amazon_Prime_Video
+  Amazon_Product_Advertising_API
+  Amazon_Publishing
+  Amazon_Redshift
+  Amazon_Rekognition
+  Amazon_Relational_Database_Service
+  Amazon_Robotics
+  Amazon_Route_53
+  Amazon_S3
+  Amazon_S3_Glacier
+  Amazon_SageMaker
+  Amazon_Scout
+  Amazon_Sidewalk
+  Amazon_Silk
+  Amazon_Simple_Notification_Service
+  Amazon_Simple_Queue_Service
+  Amazon_Spheres
+  Amazon_Standard_Identification_Number
+  Amazon_Storywriter
+  Amazon_Theater
+  Amazon_Underground
+  Amazon_Vine
+  Amazon_Web_Services
+  Amazon_and_trade_unions
+  Amazon_electric_delivery_van
+  Amazon_miniTV
+  Amazon_tax_avoidance
+  Amazon_vs._Reliance_Group
+  Criticism_of_Amazon
+  Kindle_Direct_Publishing
+  Kindle_File_Format
+  Kindle_Store
+  Kindle_Worlds
+  Kindle_single
+  List_of_Amazon_brands
+  List_of_Amazon_fatalities
+  List_of_Amazon_locations
+  List_of_Amazon_products_and_services
+  List_of_mergers_and_acquisitions_by_Amazon
+  MGM+
+  MGM_Holdings
+  MGM_Home_Entertainment
+  Prime_Now
+
+Apple
+--------------------
+Apple_Inc.
+History_of_Apple_Inc.
+Mac_(computer)
+MacBook
+iMac
+Mac_Pro
+Mac_Mini
+Mac_Studio
+iPhone
+iPhone_hardware
+History_of_the_iPhone
+iPad
+Apple_Watch
+AirPods
+iPod
+Apple_TV
+HomePod
+HomePod_Mini
+Apple_Vision_Pro
+AirTag
+iOS
+macOS
+watchOS
+tvOS
+iPadOS
+Apple_Music
+Apple_TV_(streaming_service)
+Apple_Arcade
+Apple_Fitness+
+Apple_News
+Apple_News+
+Apple_Pay
+Apple_Card
+Apple_Wallet
+iCloud
+App_Store_(Apple)
+Apple_Books
+Apple_Podcasts
+Apple_One
+Apple_Services
+Safari_(web_browser)
+FaceTime
+iMessage
+Siri
+Apple_Maps
+Find_My
+Health_(Apple)
+Photos_(Apple)
+Apple_Mail
+Apple_Silicon
+CarPlay
+ARKit
+Apple_Intelligence
+Metal_(API)
+Swift_(programming_language)
+WebKit
+Apple_ecosystem
+Family_Sharing
+Apple_Account
+AppleCare+
+Beats_Electronics
+Beats_Music
+Shazam_(music_app)
+Criticism_of_Apple_Inc.
+Apple_Inc._and_unions
+Batterygate
+Apple–FBI_encryption_dispute
+Censorship_by_Apple
+Environmental_impact_of_Apple_Inc.
+Apple's_EU_tax_dispute
+Epic_Games_v._Apple
+Litigation_involving_Apple_Inc.
+Marketing_of_Apple_Inc.
+
+
+Meta
+--------------------
+Meta_Platforms
+Facebook
+Instagram
+WhatsApp
+Messenger_(Meta)
+Threads_(social_network)
+Reality_Labs
+Meta_Quest
+Oculus_Quest
+Oculus_Rift
+Portal_(smart_display)
+Ray-Ban_Stories
+Meta_AI
+Llama_(language_model)
+Meta_Superintelligence_Labs
+Workplace_(software)
+Internet.org
+Diem_(digital_currency)
+Meta_and_unions
+Blocking_of_Meta_Platforms_in_Russia
+Lawsuits_involving_Meta_Platforms
+Cambridge_Analytica_scandal
+Facebook–Cambridge_Analytica_data_scandal
+Initial_public_offering_of_Facebook
+History_of_Facebook
+
+
+Google
+--------------------
+ Google
+Alphabet_Inc.
+History_of_Google
+Google_Search
+Google_Chrome
+YouTube
+Android_(operating_system)
+ChromeOS
+Wear_OS
+Google_Cloud
+Google_Workspace
+Gmail
+Google_Drive
+Google_Docs
+Google_Sheets
+Google_Meet
+Google_Calendar
+Google_AI
+Google_DeepMind
+Google_Gemini
+Gemini_(language_model)
+LaMDA
+PaLM
+TensorFlow
+Tensor_Processing_Unit
+Google_Pixel
+Pixel_Watch
+Pixelbook
+Chromebook
+Google_Nest
+Chromecast
+Fitbit
+Google_Ads
+Google_AdSense
+Google_Analytics
+DoubleClick
+Google_Play
+Google_Play_Services
+Android_Auto
+Android_TV
+Google_Maps
+Google_Earth
+Google_Street_View
+Waze
+Google_Pay
+Google_Wallet
+Google_Shopping
+Android_Inc.
+Nest
+Motorola_Mobility
+Criticism_of_Google
+Google_and_trade_unions
+Alphabet_Workers_Union
+Censorship_by_Google
+Privacy_concerns_with_Google
+Antitrust_cases_against_Google_by_the_European_Union
+United_States_v.Google_LLC(2023)
+Google_litigation
+2018_Google_walkouts
+
+Microsoft
+--------------------
+Microsoft
+History_of_Microsoft
+Microsoft_Windows
+Windows_11
+Windows_10
+Microsoft_Office
+Microsoft_365
+Microsoft_Word
+Microsoft_Excel
+Microsoft_PowerPoint
+Microsoft_Outlook
+Microsoft_Teams
+Microsoft_OneNote
+OneDrive
+Microsoft_SharePoint
+Microsoft_Azure
+Microsoft_Copilot
+Microsoft_Dynamics
+Microsoft_Dynamics_365
+Microsoft_Power_BI
+Microsoft_Power_Platform
+Xbox
+Xbox_360
+Xbox_One
+Xbox_Series_X_and_Series_S
+Xbox_Game_Pass
+Xbox_Cloud_Gaming
+Microsoft_Gaming
+Minecraft
+Acquisition_of_Activision_Blizzard_by_Microsoft
+Activision_Blizzard
+ZeniMax_Media
+Bethesda_Softworks
+Microsoft_Bing
+Microsoft_Advertising
+MSN
+Microsoft_Surface
+Surface_Laptop
+Surface_Pro
+Microsoft_HoloLens
+Skype
+Skype_for_Business
+GitHub
+Visual_Studio
+Visual_Studio_Code
+OpenAI_partnership
+Microsoft_Research
+LinkedIn
+Nuance_Communications
+Mojang_Studios
+Windows_Phone
+Nokia_Lumia
+Microsoft_Mobile
+Criticism_of_Microsoft
+Microsoft_and_unions
+Microsoft_litigation
+United_States_v._Microsoft_Corp.
+FTC_v._Microsoft
+Embrace,_extend,_and_extinguish
