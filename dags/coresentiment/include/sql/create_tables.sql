@@ -14,9 +14,6 @@ CREATE TABLE IF NOT EXISTS staging.page_views (
     etl_extracted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-TRUNCATE TABLE staging.page_views;
-
-
 CREATE TABLE IF NOT EXISTS analytics.page_views (
     page_view_id VARCHAR PRIMARY KEY,
     company_id VARCHAR NOT NULL,

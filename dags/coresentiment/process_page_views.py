@@ -5,7 +5,7 @@ from coresentiment.include.python_tasks.extract import download_file_task
 from coresentiment.include.python_tasks.notification import success_callback
 from coresentiment.include.python_tasks.transform import process_page_views_count_task
 from coresentiment.include.python_tasks.load_data import load_data_from_file
-
+from pendulum import duration
 
 @dag(
     dag_id="process_page_views",
@@ -17,7 +17,11 @@ from coresentiment.include.python_tasks.load_data import load_data_from_file
 
 def process_page_views():
 
-    @task(on_success_callback=success_callback)
+    @task(
+        on_success_callback=success_callback,
+        retries = 2,
+        retry_delay = duration(seconds=30)
+    )
     def download_file():
         return download_file_task()
 
