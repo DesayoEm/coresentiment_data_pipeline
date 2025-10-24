@@ -2,16 +2,6 @@
 
 An Apache Airflow data pipeline that analyzes Wikipedia pageview data to predict stock market sentiment for major tech companies.
 
-## Table of Contents
-- [Overview](#overview)
-- [Architecture & Design Decisions](#architecture--design-decisions)
-- [Pipeline Flow](#pipeline-flow)
-- [Key Features](#key-features)
-- [Running the Pipeline](#running-the-pipeline)
-- [Production Considerations](#production-considerations)
-
----
-
 ## Overview
 
 This pipeline processes Wikipedia pageview data to generate stock sentiment signals for five major tech companies: Amazon, Apple, Facebook (Meta), Google, and Microsoft. The hypothesis is that increased interest in a company's Wikipedia pages (including products and services) indicates positive sentiment and potential stock price movement.
@@ -59,7 +49,7 @@ company_id = hash(company)
 
 ---
 
-### 3. Staging → Analytics Pattern
+### 3. Staging -> Analytics Pattern
 
 **Decision:** Data loads in two stages: fast bulk load to staging, then conflict-managed transfer to analytics.
 
