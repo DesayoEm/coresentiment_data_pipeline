@@ -74,7 +74,7 @@ company_id = hash(company)
 
 **Decision:** Track Wikipedia pages related to each company, not just the main company page.
 
-**Rationale:** Stock sentiment isn't just about the company itself—it's about products, services, and ecosystem.
+**Rationale:** Stock sentiment isn't just about the company itself,it's also includes their products, and services.
 
 - Interest in "iPhone", "AirPods", "Apple Vision Pro" signals Apple sentiment
 - Interest in "AWS Lambda", "Amazon Prime" signals Amazon sentiment
